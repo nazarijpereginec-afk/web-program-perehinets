@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №5</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 15px;
+            background-color: #f4f6f8;
+            color: #000;
+        }
+
+        section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        input, button {
+            padding: 9px;
+            margin: 5px 0;
+        }
+
+        input {
+            max-width: 220px;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        .result {
+            margin-top: 12px;
+            font-weight: bold;
+        }
+
+        #rotator {
+            text-align: center;
+        }
+
+        #rotator img {
+            width: 100%;
+            max-width: 500px;
+            height: 320px;
+            object-fit: contain;
+            background: #eee;
+        }
+
+        .captcha-digit {
+            display: inline-block;
+            font-size: 30px;
+            font-weight: bold;
+            margin: 3px;
+            padding: 5px;
+            background: #e2e7ee;
+            transform: rotate(-5deg);
+        }
+
+        .nav-link {
+            display: inline-block;
+            margin: 10px;
+            cursor: pointer;
+            color: #075db5;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Лабораторна робота №5</h1>
+    <section>
+        <h2>Завдання 1</h2>
+        <label for="fahrenheit">Температура за Фаренгейтом:</label><br>
+        <input type="number" id="fahrenheit" placeholder="Градуси F">
+        <br>
+        <label for="celsius">Температура за Цельсієм:</label><br>
+        <input type="number" id="celsius" placeholder="Градуси C">
+    </section>
+
+    <section>
+        <h2>Завдання 2</h2>
+        <p id="score2">Рахунок: 0</p>
+        <p id="question2">Натисніть «Наступне завдання»</p>
+        <input type="number" id="answer2" placeholder="Ваша відповідь">
+        <br>
+        <button id="check2">Перевірити</button>
+        <button id="next2">Наступне завдання</button>
+        <p class="result" id="result2"></p>
+    </section>
+
+    <section>
+        <h2>Завдання 3</h2>
+        <p id="score3">Рахунок: 0</p>
+        <p id="question3">Натисніть «Наступне завдання»</p>
+        <div id="options3"></div>
+        <button id="next3">Наступне завдання</button>
+        <p class="result" id="result3"></p>
+    </section>
+
+    <section>
+        <h2>Завдання 4</h2>
+        <div id="rotator"></div>
+    </section>
+
+    <section>
+        <h2>Завдання 5</h2>
+        <div id="captcha"></div>
+        <input type="text" id="captchaAnswer" placeholder="Введіть цифри">
+        <br>
+        <button id="checkCaptcha">Перевірити CAPTCHA</button>
+        <button id="newCaptcha">Нова CAPTCHA</button>
+        <p class="result" id="captchaResult"></p>
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>
